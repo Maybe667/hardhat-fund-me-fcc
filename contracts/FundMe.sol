@@ -38,6 +38,10 @@ contract FundMe {
         s_priceFeed = AggregatorV3Interface(s_priceFeedAddress);
     }
 
+    receive() external payable {}
+
+    fallback() external payable {}
+
     /**
      * @notice This function funds this contracts
      * @dev This implements price feeds as our library
